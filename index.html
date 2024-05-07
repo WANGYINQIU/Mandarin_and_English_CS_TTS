@@ -1,16 +1,66 @@
-<h1 align="center">Code-switching speech synthesis for Mandarin-English using FastSpeech2: A unified IPA-based approach</h1>
-<h2 align="center"><strong>Author:</strong> Wang Yinqiu</h2>
-
-<h3>1. Modeling the phonemes of Mandarin and English separately:</h3>
-<p>To model the phonemes of Mandarin and English separately, I conducted three sets of experiments:</p>
-<ul>
-  <li>(1) Group A: Pre-training the model using a code-switched Mandarin-English dataset for ASR tasks and then fine-tuning with 500 high-quality code-switched Mandarin-English audios;</li>
-  <li>(2) Group B: Pre-training the model with a dataset for TTS tasks in Mandarin, followed by fine-tuning using 500 high-quality code-switched Mandarin-English audios;</li>
-  <li>(3) Group C: Pre-training the model with a dataset for TTS tasks in Mandarin, followed by fine-tuning with a TTS English dataset.</li>
-</ul>
-
-<h3>2. Unifying the input formats for both languages as phonological features based on the IPA:</h3>
-<p>Group D: The input formats for both languages were unified as phonological features based on the IPA, fine-tuning the pre-trained model with only 500 high-quality mixed Mandarin-English sentences (the pre-trained model is sourced from the <a href="https://github.com/DigitalPhonetics/IMS-Toucan" target="_blank">IMS-Toucan</a> repository on GitHub).</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code-Switching Speech Synthesis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+        }
+        h1 {
+            color: #333;
+        }
+        section {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #f8f8f8;
+        }
+        article {
+            margin-top: 20px;
+        }
+        footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Code-switching Speech Synthesis for Mandarin-English using a Unified IPA-based Approach with FastSpeech2</h1>
+    </header>
+    <section>
+        <h2>Overview</h2>
+        <p>This research explores two main methods for synthesizing natural-sounding code-switched speech between Mandarin and English using the FastSpeech2 model:</p>
+        <ul>
+            <li><strong>Method 1:</strong> Modeling the phonemes of Mandarin and English separately, which involved handling alignment with the Montreal Forced Aligner and developing a mixed dictionary and acoustic model.</li>
+            <li><strong>Method 2:</strong> Unifying the input formats for both languages as phonological features based on the International Phonetic Alphabet (IPA), implemented using the <a href="https://github.com/IMS-Toucan">IMS-Toucan</a> GitHub repository. </li>
+        </ul>
+    </section>
+    <section>
+        <h2>Experimental Setup</h2>
+        <article>
+            <h3>Method 1</h3>
+            <p>For Method 1, three sets of experiments were conducted:</p>
+            <ol>
+                <li>Group A: Pre-training on a code-switched Mandarin-English dataset for ASR tasks, then fine-tuning with 500 high-quality code-switched Mandarin-English audios.</li>
+                <li>Group B: Pre-training on a dataset for Mandarin TTS tasks, followed by fine-tuning using the 500 code-switched audios.</li>
+                <li>Group C: Pre-training on a dataset for Mandarin TTS tasks, followed by fine-tuning with an English TTS dataset.</li>
+            </ol>
+        </article>
+        <article>
+            <h3>Method 2 (Group D)</h3>
+            <p>The unified IPA-based approach was implemented using the IMS-Toucan repository, with the pre-trained model fine-tuned on only 500 high-quality mixed Mandarin-English sentences.</p>
+        </article>
+    </section>
+    <footer>
+        <p>For the unified IPA-based approach (Method 2/Group D), the input formats for both Mandarin and English were represented as phonological features based on the IPA. This method was implemented using the <a href="https://github.com/IMS-Toucan">IMS-Toucan</a> GitHub repository, with the pre-trained model fine-tuned on only 500 high-quality mixed Mandarin-English sentences.</p>
+    </footer>
+</body>
+</html>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -71,3 +121,4 @@
     </table>
 </body>
 </html>
+<h2><strong>Relevance: </strong>Successful development of code-switching TTS systems can facilitate communication across languages, with applications in education, media, and assistive technologies for enhancing accessibility in multilingual societies.</h2>
